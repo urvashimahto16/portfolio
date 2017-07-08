@@ -21,35 +21,30 @@ body {
 
 <p><a href="https://www.instagram.com/finstaiamsnake/"><font color="powderblue">Instagram</a> <a href="https://twitter.com/urvashimahto1"><font color="powderblue">Twitter</a> <a href="https://www.youtube.com/channel/UCWgZh92B8erSqflLQNTY84w"><font color="powderblue">YouTube</a><font color="cyan"></p>
 
-<div class="slideshow-container">
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="\portfolio\profile2.png" style="width:50%">
-    <div class="text">Caption Text</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="\portfolio\profile2.png" style="width:50%">
-    <div class="text">Caption Two</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="\portfolio\profile2.png" style="width:50%">
-    <div class="text">Caption Three</div>
-  </div>
-
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="\portfolio\profile2.png" style="width:100%">
+  <img class="mySlides" src="\portfolio\profile.png" style="width:100%">
+  <img class="mySlides" src="\portfolio\profile2.png" style="width:100%">
 </div>
-<br>
 
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
 
 <table style="width:100%">
   <tr>
